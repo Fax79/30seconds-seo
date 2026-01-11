@@ -1,0 +1,18 @@
+[
+  {
+    "slug": "roma",
+    "meta_title": "Roma: Guida Turistica Completa e Itinerario 3 Giorni",
+    "meta_description": "Scopri l'anima di Roma. Guida completa con itinerario di 3 giorni, i migliori quartieri e consigli local per evitare le trappole per turisti.",
+    "hero_title": "ROMA: L'ANIMA ETERNA",
+    "hero_image": "/images/roma_hero.jpg",
+    "intro_text": "Roma, la Città Eterna, non è semplicemente una destinazione, ma un'esperienza profonda che risveglia i sensi e l'intelletto. Ogni strada lastricata di sampietrini narra storie millenarie di imperatori e papi. Camminare per Roma significa calpestare la storia, ammirare l'arte che si fonde con l'architettura e lasciarsi avvolgere da un'atmosfera unica, dove il sacro e il profano danzano in un balletto eterno.",
+    "day_1_title": "Giorno 1: Tuffo nella Storia e Trastevere",
+    "day_1_content": "Mattina: Immergetevi nell'antica Roma con una visita al Colosseo, seguita da una passeggiata tra le rovine del Foro Romano e del Palatino. Ammirate la grandezza dell'Impero, lasciandovi trasportare indietro nel tempo.\n\nPomeriggio: Proseguite verso il Circo Massimo e poi salite al Giardino degli Aranci sull'Aventino per una vista mozzafiato sulla città, magari spiando dal famoso buco della serratura del Priorato.\n\nSera: Cenate a Trastevere, il quartiere più pittoresco di Roma. Perdetevi tra i suoi vicoli per trovare osterie tradizionali dove gustare la vera cucina romana.",
+    "widgets": {
+      "tiqets_url": "https://tiqets.tpx.lt/QPyOzQcX", 
+      "tiqets_label": "Biglietti Colosseo & Vaticano (Salta la Coda)",
+      "flight_destination": "FCO",
+      "hotel_link": "https://www.expedia.com/Roma-Hotel.d179899.Travel-Guide-Hotels"
+    }
+  }
+]
