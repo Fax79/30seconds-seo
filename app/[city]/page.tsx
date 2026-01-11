@@ -1,7 +1,6 @@
 import destinations from '@/data/destinations.json';
 import { notFound } from 'next/navigation';
 
-// Se vedi rosso qui sotto, controlla di aver rinominato il file in page.tsx!
 type Props = {
   params: Promise<{ city: string }>
 }
@@ -9,7 +8,9 @@ type Props = {
 // --- 1. IL MOTORE SEO ---
 export async function generateMetadata({ params }: Props) {
   const resolvedParams = await params;
-  const cityData = destinations.find((d) => d.slug === resolvedParams.city);
+  
+  // TRUCCO: Aggiungiamo ": any" per dire a TypeScript di non rompere se mancano campi
+  const cityData: any = destinations.find((d) => d.slug === resolvedParams.city);
 
   if (!cityData) {
     return { title: 'Destinazione non trovata' }
@@ -23,7 +24,9 @@ export async function generateMetadata({ params }: Props) {
 // --- 2. LA PAGINA VISIBILE ---
 export default async function CityPage({ params }: Props) {
   const resolvedParams = await params;
-  const cityData = destinations.find((d) => d.slug === resolvedParams.city);
+  
+  // TRUCCO: Anche qui aggiungiamo ": any"
+  const cityData: any = destinations.find((d) => d.slug === resolvedParams.city);
 
   if (!cityData) { return notFound(); }
 
@@ -52,7 +55,7 @@ export default async function CityPage({ params }: Props) {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-10">
             
             {/* 1. ASSICURAZIONE */}
-            {cityData.widgets.insurance_url && (
+            {cityData.widgets?.insurance_url && (
                 <a href={cityData.widgets.insurance_url} target="_blank" rel="noopener" className="p-4 bg-green-50 border border-green-200 rounded-xl hover:shadow-md transition flex items-center">
                     <span className="text-2xl mr-3">🚑</span>
                     <div>
@@ -63,7 +66,7 @@ export default async function CityPage({ params }: Props) {
             )}
 
             {/* 2. VOLI */}
-            {cityData.widgets.flight_url && (
+            {cityData.widgets?.flight_url && (
                 <a href={cityData.widgets.flight_url} target="_blank" rel="noopener" className="p-4 bg-sky-50 border border-sky-200 rounded-xl hover:shadow-md transition flex items-center">
                     <span className="text-2xl mr-3">✈️</span>
                     <div>
@@ -74,7 +77,7 @@ export default async function CityPage({ params }: Props) {
             )}
 
             {/* 3. ATTRAZIONI */}
-            {cityData.widgets.tiqets_url && (
+            {cityData.widgets?.tiqets_url && (
                 <a href={cityData.widgets.tiqets_url} target="_blank" rel="noopener" className="p-4 bg-blue-50 border border-blue-200 rounded-xl hover:shadow-md transition flex items-center">
                     <span className="text-2xl mr-3">🎟️</span>
                     <div>
@@ -85,7 +88,7 @@ export default async function CityPage({ params }: Props) {
             )}
 
             {/* 4. HOTEL */}
-            {cityData.widgets.hotel_link && (
+            {cityData.widgets?.hotel_link && (
                 <a href={cityData.widgets.hotel_link} target="_blank" rel="noopener" className="p-4 bg-indigo-50 border border-indigo-200 rounded-xl hover:shadow-md transition flex items-center">
                     <span className="text-2xl mr-3">🛏️</span>
                     <div>
