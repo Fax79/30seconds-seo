@@ -1,29 +1,37 @@
-import React from 'react';
+import destinations from '../../data/destinations.json';
 import { notFound } from 'next/navigation';
-import destinations from '@/data/destinations.json';
-import ContextualWidget from '@/components/ContextualWidget';
 
-// 1. Questa funzione dice a Next.js quali pagine esistono
-export async function generateStaticParams() {
-  return destinations.map((city) => ({
-    city: city.slug,
-  }));
+// --- 1. IL MOTORE SEO (Quello che Google legge) ---
+// Questa funzione è invisibile all'utente ma fondamentale per l'indicizzazione.
+// Sostituisce "Create Next App" con il titolo vero (es. "Roma: Guida...").
+export async function generateMetadata({ params }) {
+  const resolvedParams = await params;
+  const cityData = destinations.find((d) => d.slug === resolvedParams.city);
+
+  if (!cityData) {
+    return {
+      title: 'Destinazione non trovata',
+      description: 'Guida non disponibile.'
+    }
+  }
+
+  return {
+    title: cityData.meta_title,
+    description: cityData.meta_description,
+  }
 }
 
-// DEFINIZIONE TIPO: Params ora è una Promise (una promessa)
-type Props = {
-  params: Promise<{ city: string }>
-}
-
-// 2. Aggiungiamo 'async' prima della funzione
-export default async function CityPage({ params }: Props) {
+// --- 2. LA PAGINA VISIBILE (Quello che l'utente vede) ---
+export default async function CityPage({ params }) {
   
-  // 3. ASPETTIAMO che i parametri siano pronti
-  const { city } = await params;
+  // In Next.js 15 bisogna aspettare (await) che i parametri siano pronti
+  const resolvedParams = await params;
+  const city = resolvedParams.city;
 
-  // Ora usiamo 'city' che è la stringa pulita ("roma")
+  // Cerchiamo i dati nel JSON
   const cityData = destinations.find((d) => d.slug === city);
 
+  // Se la città non esiste nel JSON, diamo errore 404
   if (!cityData) {
     return notFound();
   }
@@ -31,7 +39,7 @@ export default async function CityPage({ params }: Props) {
   return (
     <div className="min-h-screen bg-gray-50 font-sans">
       
-      {/* HEADER / HERO SECTION */}
+      {/* HERO SECTION (Immagine grande in alto) */}
       <header className="relative h-[60vh] flex items-center justify-center">
         <div className="absolute inset-0 bg-black/50 z-10"></div>
         <img 
@@ -53,32 +61,41 @@ export default async function CityPage({ params }: Props) {
       {/* CONTENUTO PRINCIPALE */}
       <main className="max-w-3xl mx-auto px-6 py-12 bg-white -mt-20 relative z-30 rounded-t-3xl shadow-xl">
         
-        {/* Intro SEO */}
+        {/* Intro con capolettera arancione */}
         <p className="text-lg text-gray-700 leading-relaxed mb-8 first-letter:text-4xl first-letter:font-bold first-letter:mr-1 first-letter:float-left first-letter:text-[#E67E22]">
           {cityData.intro_text}
         </p>
 
-        {/* WIDGET */}
+        {/* WIDGET TIQETS (Integrato direttamente qui per evitare errori) */}
         {cityData.widgets.tiqets_url && (
-            <ContextualWidget 
-                type="tiqets"
-                label={cityData.widgets.tiqets_label}
-                link={cityData.widgets.tiqets_url}
-                image={cityData.hero_image} 
-            />
+            <div className="my-10 p-6 bg-blue-50 border border-blue-100 rounded-2xl shadow-sm text-center transform transition hover:scale-[1.01]">
+                <h3 className="text-xl font-bold text-blue-900 mb-2">🎟️ Salta la Coda a {cityData.hero_title}</h3>
+                <p className="text-blue-700 mb-4 text-sm">Non perdere tempo in biglietteria.</p>
+                <a 
+                    href={cityData.widgets.tiqets_url} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full shadow-md transition-colors"
+                >
+                    {cityData.widgets.tiqets_label} ➜
+                </a>
+            </div>
         )}
 
         <hr className="my-10 border-gray-100" />
 
-        {/* GIORNO 1 */}
-        <h2 className="text-2xl font-bold text-[#2C3E50] mb-4">
-          {cityData.day_1_title}
-        </h2>
-        <div className="prose text-gray-600 whitespace-pre-line mb-8 leading-7">
-            {cityData.day_1_content}
-        </div>
+        {/* ITINERARIO GIORNO 1 */}
+        <section>
+            <h2 className="text-2xl font-bold text-[#2C3E50] mb-4 flex items-center">
+                <span className="bg-[#E67E22] text-white w-8 h-8 rounded-full flex items-center justify-center text-sm mr-3 font-bold">1</span>
+                {cityData.day_1_title}
+            </h2>
+            <div className="prose prose-lg text-gray-600 whitespace-pre-line mb-8 leading-relaxed">
+                {cityData.day_1_content}
+            </div>
+        </section>
 
-        {/* THE WALL */}
+        {/* THE WALL (Il box arancione per scaricare l'app) */}
         <div className="bg-gradient-to-br from-[#E67E22] to-[#D35400] p-8 rounded-2xl text-center text-white shadow-lg mt-12 transform hover:scale-[1.02] transition-transform">
             <h3 className="text-2xl font-bold mb-2">
                 Vuoi l'itinerario completo?
@@ -88,7 +105,7 @@ export default async function CityPage({ params }: Props) {
             </p>
             <a 
                 href="https://www.30secondstoguide.it" 
-                className="inline-block bg-white text-[#E67E22] font-bold py-3 px-8 rounded-full shadow-md hover:bg-gray-100"
+                className="inline-block bg-white text-[#E67E22] font-bold py-3 px-8 rounded-full shadow-md hover:bg-gray-100 transition-colors"
             >
                 VAI ALL'APP E SCARICA IL PDF ➜
             </a>
@@ -99,8 +116,10 @@ export default async function CityPage({ params }: Props) {
 
       </main>
 
+      {/* FOOTER */}
       <footer className="bg-gray-100 py-8 text-center text-gray-500 text-sm mt-12">
         <p>© 2026 30SecondsToGuide - Travel Tech</p>
+        <p className="text-xs mt-2">Made with Next.js & Vercel</p>
       </footer>
     </div>
   );
