@@ -1,7 +1,7 @@
 import destinations from '@/data/destinations.json';
 import { notFound } from 'next/navigation';
 
-// --- AGGIUNTA: Diciamo a Next.js quali città esistono ---
+// Diciamo a Next.js quali città esistono per costruire le pagine statiche
 export async function generateStaticParams() {
   return destinations.map((destination) => ({
     city: destination.slug,
@@ -17,9 +17,7 @@ export async function generateMetadata({ params }: Props) {
   const resolvedParams = await params;
   const cityData: any = destinations.find((d) => d.slug === resolvedParams.city);
 
-  if (!cityData) {
-    return { title: 'Destinazione non trovata' }
-  }
+  if (!cityData) { return { title: 'Destinazione non trovata' } }
   return {
     title: cityData.meta_title,
     description: cityData.meta_description,
@@ -32,6 +30,31 @@ export default async function CityPage({ params }: Props) {
   const cityData: any = destinations.find((d) => d.slug === resolvedParams.city);
 
   if (!cityData) { return notFound(); }
+
+  // Funzione interna per decidere se mostrare BANNER o BOTTONE
+  const renderWidget = (url: string, image: string, label: string, icon: string, colorClass: string) => {
+    if (!url) return null;
+
+    // SE C'È L'IMMAGINE -> MOSTRA BANNER
+    if (image) {
+      return (
+        <a href={url} target="_blank" rel="noopener" className="block hover:opacity-90 transition-opacity transform hover:scale-[1.02] duration-300 shadow-md rounded-xl overflow-hidden">
+          <img src={image} alt={label} className="w-full h-auto object-cover" />
+        </a>
+      );
+    }
+
+    // SE NON C'È IMMAGINE -> MOSTRA BOTTONE CLASSICO
+    return (
+      <a href={url} target="_blank" rel="noopener" className={`p-4 ${colorClass} rounded-xl hover:shadow-md transition flex items-center`}>
+          <span className="text-2xl mr-3">{icon}</span>
+          <div>
+              <h4 className="font-bold opacity-90">{label}</h4>
+              <p className="text-xs opacity-70">Clicca per info</p>
+          </div>
+      </a>
+    );
+  };
 
   return (
     <div className="min-h-screen bg-gray-50 font-sans">
@@ -54,51 +77,43 @@ export default async function CityPage({ params }: Props) {
           {cityData.intro_text}
         </p>
 
-        {/* --- TRAVEL TOOLKIT (WIDGET DINAMICI) --- */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-10">
+        {/* --- TRAVEL TOOLKIT (Ora supporta i Banner!) --- */}
+        <div className="grid grid-cols-1 gap-6 my-10">
             
             {/* 1. ASSICURAZIONE */}
-            {cityData.widgets?.insurance_url && (
-                <a href={cityData.widgets.insurance_url} target="_blank" rel="noopener" className="p-4 bg-green-50 border border-green-200 rounded-xl hover:shadow-md transition flex items-center">
-                    <span className="text-2xl mr-3">🚑</span>
-                    <div>
-                        <h4 className="font-bold text-green-900">Assicurazione</h4>
-                        <p className="text-xs text-green-700">Sconto riservato</p>
-                    </div>
-                </a>
+            {renderWidget(
+              cityData.widgets?.insurance_url, 
+              cityData.widgets?.insurance_image, 
+              "Assicurazione Viaggio", 
+              "🚑", 
+              "bg-green-50 border border-green-200 text-green-900"
             )}
 
             {/* 2. VOLI */}
-            {cityData.widgets?.flight_url && (
-                <a href={cityData.widgets.flight_url} target="_blank" rel="noopener" className="p-4 bg-sky-50 border border-sky-200 rounded-xl hover:shadow-md transition flex items-center">
-                    <span className="text-2xl mr-3">✈️</span>
-                    <div>
-                        <h4 className="font-bold text-sky-900">Voli Economici</h4>
-                        <p className="text-xs text-sky-700">Trova offerte</p>
-                    </div>
-                </a>
+            {renderWidget(
+              cityData.widgets?.flight_url, 
+              cityData.widgets?.flight_image, 
+              "Voli Economici", 
+              "✈️", 
+              "bg-sky-50 border border-sky-200 text-sky-900"
             )}
 
-            {/* 3. ATTRAZIONI */}
-            {cityData.widgets?.tiqets_url && (
-                <a href={cityData.widgets.tiqets_url} target="_blank" rel="noopener" className="p-4 bg-blue-50 border border-blue-200 rounded-xl hover:shadow-md transition flex items-center">
-                    <span className="text-2xl mr-3">🎟️</span>
-                    <div>
-                        <h4 className="font-bold text-blue-900">Attrazioni</h4>
-                        <p className="text-xs text-blue-700">{cityData.widgets.tiqets_label || "Salta la coda"}</p>
-                    </div>
-                </a>
+            {/* 3. ATTRAZIONI (TIQETS) */}
+            {renderWidget(
+              cityData.widgets?.tiqets_url, 
+              cityData.widgets?.tiqets_image, 
+              cityData.widgets?.tiqets_label || "Attrazioni", 
+              "🎟️", 
+              "bg-blue-50 border border-blue-200 text-blue-900"
             )}
 
             {/* 4. HOTEL */}
-            {cityData.widgets?.hotel_link && (
-                <a href={cityData.widgets.hotel_link} target="_blank" rel="noopener" className="p-4 bg-indigo-50 border border-indigo-200 rounded-xl hover:shadow-md transition flex items-center">
-                    <span className="text-2xl mr-3">🛏️</span>
-                    <div>
-                        <h4 className="font-bold text-indigo-900">Hotel</h4>
-                        <p className="text-xs text-indigo-700">Dove dormire</p>
-                    </div>
-                </a>
+            {renderWidget(
+              cityData.widgets?.hotel_link, 
+              cityData.widgets?.hotel_image, 
+              "Migliori Hotel", 
+              "🛏️", 
+              "bg-indigo-50 border border-indigo-200 text-indigo-900"
             )}
         </div>
 
