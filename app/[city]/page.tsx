@@ -1,6 +1,13 @@
 import destinations from '@/data/destinations.json';
 import { notFound } from 'next/navigation';
 
+// --- AGGIUNTA: Diciamo a Next.js quali città esistono ---
+export async function generateStaticParams() {
+  return destinations.map((destination) => ({
+    city: destination.slug,
+  }));
+}
+
 type Props = {
   params: Promise<{ city: string }>
 }
@@ -8,8 +15,6 @@ type Props = {
 // --- 1. IL MOTORE SEO ---
 export async function generateMetadata({ params }: Props) {
   const resolvedParams = await params;
-  
-  // TRUCCO: Aggiungiamo ": any" per dire a TypeScript di non rompere se mancano campi
   const cityData: any = destinations.find((d) => d.slug === resolvedParams.city);
 
   if (!cityData) {
@@ -24,8 +29,6 @@ export async function generateMetadata({ params }: Props) {
 // --- 2. LA PAGINA VISIBILE ---
 export default async function CityPage({ params }: Props) {
   const resolvedParams = await params;
-  
-  // TRUCCO: Anche qui aggiungiamo ": any"
   const cityData: any = destinations.find((d) => d.slug === resolvedParams.city);
 
   if (!cityData) { return notFound(); }

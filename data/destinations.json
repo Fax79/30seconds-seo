@@ -1,18 +1,29 @@
 [
   {
     "slug": "roma",
-    "meta_title": "Roma: Guida Turistica Completa e Itinerario 3 Giorni",
-    "meta_description": "Scopri l'anima di Roma. Guida completa con itinerario di 3 giorni, i migliori quartieri e consigli local per evitare le trappole per turisti.",
-    "hero_title": "ROMA: L'ANIMA ETERNA",
-    "hero_image": "/images/roma_hero.jpg",
-    "intro_text": "Roma, la Città Eterna, non è semplicemente una destinazione, ma un'esperienza profonda che risveglia i sensi e l'intelletto. Ogni strada lastricata di sampietrini narra storie millenarie di imperatori e papi. Camminare per Roma significa calpestare la storia, ammirare l'arte che si fonde con l'architettura e lasciarsi avvolgere da un'atmosfera unica, dove il sacro e il profano danzano in un balletto eterno.",
-    "day_1_title": "Giorno 1: Tuffo nella Storia e Trastevere",
-    "day_1_content": "Mattina: Immergetevi nell'antica Roma con una visita al Colosseo, seguita da una passeggiata tra le rovine del Foro Romano e del Palatino. Ammirate la grandezza dell'Impero, lasciandovi trasportare indietro nel tempo.\n\nPomeriggio: Proseguite verso il Circo Massimo e poi salite al Giardino degli Aranci sull'Aventino per una vista mozzafiato sulla città, magari spiando dal famoso buco della serratura del Priorato.\n\nSera: Cenate a Trastevere, il quartiere più pittoresco di Roma. Perdetevi tra i suoi vicoli per trovare osterie tradizionali dove gustare la vera cucina romana.",
+    "meta_title": "Roma: Guida Turistica & Itinerario 3 Giorni",
+    "meta_description": "Scopri l'anima di Roma: dal Colosseo a Trastevere. Guida pratica per italiani con itinerario, hotel e biglietti.",
+    "hero_image": "https://images.unsplash.com/photo-1552832230-c0197dd311b5?q=80&w=1920&auto=format&fit=crop",
+    "hero_title": "ROMA: L'ETERNA",
+    "intro_text": "Roma non è una città come le altre. È un grande museo a cielo aperto, un salotto che da secoli accoglie viaggiatori, pellegrini e sognatori. Qui ogni pietra racconta una storia di imperatori, papi e artisti che hanno sfidato l'eternità.",
+    "day_1_title": "Il Cuore Antico: Colosseo & Fori",
+    "day_1_content": "Inizia la tua avventura dal simbolo indiscusso: il Colosseo. Arriva presto (8:30) per evitare la folla oceanica.\n\nDopo aver ammirato l'anfiteatro, prosegui verso i Fori Imperiali, camminando letteralmente sopra la storia. Non perderti la vista dal colle Palatino: è lì che Romolo fondò la città.\n\nPer pranzo, evita i trappoloni turistici proprio davanti all'uscita e dirigiti verso il rione Monti per una carbonara autentica.",
     "widgets": {
-      "tiqets_url": "https://tiqets.tpx.lt/QPyOzQcX", 
-      "tiqets_label": "Biglietti Colosseo & Vaticano (Salta la Coda)",
-      "flight_destination": "FCO",
-      "hotel_link": "https://www.expedia.com/Roma-Hotel.d179899.Travel-Guide-Hotels"
+      "tiqets_url": "https://www.tiqets.com/en/rome-attractions-c71631/?partner=fabioterrasis",
+      "tiqets_label": "Biglietti Colosseo & Vaticano"
+    }
+  },
+  {
+    "slug": "tokyo",
+    "meta_title": "Tokyo: Guida turistica completa - Itinerari, Storia e Cultura",
+    "meta_description": "Scopri l'anima di Tokyo: dai templi di Asakusa ai neon di Shinjuku. Itinerario di 3 giorni, consigli su dove dormire e cosa mangiare.",
+    "hero_image": "https://images.unsplash.com/photo-1503899036084-c55cdd92da26?q=80&w=1920&auto=format&fit=crop",
+    "hero_title": "TOKYO: L'ANIMA ETERNA",
+    "intro_text": "Tokyo non è semplicemente una metropoli, è un universo in continua espansione, un caleidoscopio di luci al neon e tradizioni secolari. Qui, i ritmi frenetici della modernità più spinta si fondono con la serena contemplazione dei giardini zen.",
+    "day_1_title": "Asakusa, Ueno & Ginza: Tradizione e Lusso",
+    "day_1_content": "Iniziate la giornata ad Asakusa, visitando il maestoso Tempio Sensoji e passeggiando lungo la vivace Nakamise Dori per immergervi nella Tokyo più tradizionale.\n\nNel pomeriggio, prendete il treno per Ueno. Qui potete visitare il Parco di Ueno e il Museo Nazionale di Tokyo.\n\nLa sera, dirigetevi a Ginza, il quartiere dello shopping di lusso. Passeggiate per le strade illuminate, ammirate le vetrine scintillanti e cenate in uno dei suoi eleganti ristoranti.",
+    "widgets": {
+      "insurance_url": "https://heymondo.it/?utm_medium=Afiliado&utm_source=30SECONDSTOGUIDE&utm_campaign=PRINCIPAL&cod_descuento=30SECONDSTOGUIDE&ag_campaign=TOKYO&agencia=JzPWeAXXi7s0b94oPYh2FmTwaWKFpiCp1a8PkqOn&redirect=TEMPORAL"
     }
   }
 ]
