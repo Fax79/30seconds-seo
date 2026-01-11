@@ -1,9 +1,7 @@
-import destinations from '../../data/destinations.json';
+import destinations from '@/data/destinations.json'; 
 import { notFound } from 'next/navigation';
 
-// --- 1. IL MOTORE SEO (Quello che Google legge) ---
-// Questa funzione è invisibile all'utente ma fondamentale per l'indicizzazione.
-// Sostituisce "Create Next App" con il titolo vero (es. "Roma: Guida...").
+// --- 1. IL MOTORE SEO ---
 export async function generateMetadata({ params }) {
   const resolvedParams = await params;
   const cityData = destinations.find((d) => d.slug === resolvedParams.city);
@@ -21,17 +19,13 @@ export async function generateMetadata({ params }) {
   }
 }
 
-// --- 2. LA PAGINA VISIBILE (Quello che l'utente vede) ---
+// --- 2. LA PAGINA VISIBILE ---
 export default async function CityPage({ params }) {
   
-  // In Next.js 15 bisogna aspettare (await) che i parametri siano pronti
   const resolvedParams = await params;
   const city = resolvedParams.city;
-
-  // Cerchiamo i dati nel JSON
   const cityData = destinations.find((d) => d.slug === city);
 
-  // Se la città non esiste nel JSON, diamo errore 404
   if (!cityData) {
     return notFound();
   }
@@ -39,7 +33,7 @@ export default async function CityPage({ params }) {
   return (
     <div className="min-h-screen bg-gray-50 font-sans">
       
-      {/* HERO SECTION (Immagine grande in alto) */}
+      {/* HERO SECTION */}
       <header className="relative h-[60vh] flex items-center justify-center">
         <div className="absolute inset-0 bg-black/50 z-10"></div>
         <img 
@@ -47,7 +41,6 @@ export default async function CityPage({ params }) {
             alt={cityData.hero_title} 
             className="absolute inset-0 w-full h-full object-cover"
         />
-        
         <div className="relative z-20 text-center px-4">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-4 tracking-tight drop-shadow-md">
             {cityData.hero_title}
@@ -61,12 +54,12 @@ export default async function CityPage({ params }) {
       {/* CONTENUTO PRINCIPALE */}
       <main className="max-w-3xl mx-auto px-6 py-12 bg-white -mt-20 relative z-30 rounded-t-3xl shadow-xl">
         
-        {/* Intro con capolettera arancione */}
+        {/* Intro */}
         <p className="text-lg text-gray-700 leading-relaxed mb-8 first-letter:text-4xl first-letter:font-bold first-letter:mr-1 first-letter:float-left first-letter:text-[#E67E22]">
           {cityData.intro_text}
         </p>
 
-        {/* WIDGET TIQETS (Integrato direttamente qui per evitare errori) */}
+        {/* WIDGET TIQETS */}
         {cityData.widgets.tiqets_url && (
             <div className="my-10 p-6 bg-blue-50 border border-blue-100 rounded-2xl shadow-sm text-center transform transition hover:scale-[1.01]">
                 <h3 className="text-xl font-bold text-blue-900 mb-2">🎟️ Salta la Coda a {cityData.hero_title}</h3>
@@ -95,7 +88,7 @@ export default async function CityPage({ params }) {
             </div>
         </section>
 
-        {/* THE WALL (Il box arancione per scaricare l'app) */}
+        {/* THE WALL */}
         <div className="bg-gradient-to-br from-[#E67E22] to-[#D35400] p-8 rounded-2xl text-center text-white shadow-lg mt-12 transform hover:scale-[1.02] transition-transform">
             <h3 className="text-2xl font-bold mb-2">
                 Vuoi l'itinerario completo?
