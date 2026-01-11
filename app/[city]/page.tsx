@@ -1,8 +1,15 @@
-import destinations from '@/data/destinations.json'; 
+import destinations from '../../data/destinations.json';
 import { notFound } from 'next/navigation';
 
+// --- AGGIUNTA FONDAMENTALE PER TYPESCRIPT ---
+// Stiamo dicendo al "poliziotto": "Guarda che params è una Promessa che contiene la città"
+type Props = {
+  params: Promise<{ city: string }>
+}
+
 // --- 1. IL MOTORE SEO ---
-export async function generateMetadata({ params }) {
+// Nota l'aggiunta di ": Props" accanto a params
+export async function generateMetadata({ params }: Props) {
   const resolvedParams = await params;
   const cityData = destinations.find((d) => d.slug === resolvedParams.city);
 
@@ -20,7 +27,8 @@ export async function generateMetadata({ params }) {
 }
 
 // --- 2. LA PAGINA VISIBILE ---
-export default async function CityPage({ params }) {
+// Anche qui aggiungiamo ": Props"
+export default async function CityPage({ params }: Props) {
   
   const resolvedParams = await params;
   const city = resolvedParams.city;
