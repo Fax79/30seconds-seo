@@ -1,27 +1,38 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useEffect } from 'react';
 
 type Props = {
-  url: string; // Cambiato in 'url'
+  url: string;
 };
 
 export default function TravelWidget({ url }: Props) {
-  const containerRef = useRef<HTMLDivElement>(null);
-
   useEffect(() => {
-    if (!containerRef.current) return;
-    containerRef.current.innerHTML = '';
+    // Rimuoviamo eventuali script vecchi per evitare conflitti
+    const existingScript = document.getElementById('tp-widget-script');
+    if (existingScript) {
+      existingScript.remove();
+    }
+
     const script = document.createElement('script');
+    script.id = 'tp-widget-script';
     script.src = url;
     script.async = true;
     script.charset = 'utf-8';
-    containerRef.current.appendChild(script);
+    
+    // Lo iniettiamo nel body così è libero di agire su tutta la pagina
+    document.body.appendChild(script);
+
+    return () => {
+      const scriptToRemove = document.getElementById('tp-widget-script');
+      if (scriptToRemove) scriptToRemove.remove();
+    };
   }, [url]);
 
   return (
-    <div className="w-full my-8 flex justify-center">
-      <div ref={containerRef} className="w-full min-h-[300px]" />
+    <div className="w-full my-12 flex justify-center min-h-[250px]">
+      {/* Questo div è dove il widget cercherà di "agganciarsi" */}
+      <div className="tp-widget-wrapper w-full" />
     </div>
   );
 }
