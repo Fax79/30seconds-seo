@@ -37,7 +37,7 @@
     "day_1_title": "Lady Liberty, Wall Street & Brooklyn Bridge",
     "day_1_content": "Iniziate la giornata con una visita emozionante alla Statua della Libertà e a Ellis Island partendo da Battery Park.\n\nNel pomeriggio, esplorate il Financial District, passeggiando per Wall Street e riflettendo al 9/11 Memorial.\n\nAl tramonto, attraversate a piedi il magnifico Ponte di Brooklyn per godervi lo skyline illuminato e cenate a Brooklyn Heights.",
     "widgets": {
-      "script_src": "https://tpemb.com/content?currency=eur&trs=476244&shmarker=686826.NY&locale=it&default_destination=NYC&stops=any&show_hotels=true&powered_by=true&border_radius=0&plain=true&color_button=%2300A991&color_button_text=%23ffffff&promo_id=3414&campaign_id=111" 
+      "script_src": "/widget-ny.html"
     }
   }
 ]
