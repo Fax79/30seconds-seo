@@ -1,6 +1,6 @@
 import destinations from '@/data/destinations.json';
 import { notFound } from 'next/navigation';
-import TravelWidget from '@/components/TravelWidget'; // <--- ECCO IL NUOVO IMPORT
+import TravelWidget from '@/components/TravelWidget';
 
 export async function generateStaticParams() {
   return destinations.map((destination) => ({
