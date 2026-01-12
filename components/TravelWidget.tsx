@@ -1,19 +1,19 @@
 'use client';
 
 type Props = {
-  widgetPath: string; // Ora si aspetta il percorso del file HTML
+  widgetPath: string;
 };
 
 export default function TravelWidget({ widgetPath }: Props) {
   return (
-    <div className="w-full flex justify-center my-8">
+    <div className="w-full flex justify-center my-8 min-h-[300px]">
       <iframe 
         src={widgetPath}
         title="Widget Ricerca"
         width="100%"
-        height="250" 
-        style={{ border: 'none', overflow: 'hidden' }}
-        className="rounded-xl shadow-sm"
+        height="500" // Aumentiamo l'altezza per evitare che il widget venga tagliato
+        style={{ border: 'none' }}
+        className="rounded-xl overflow-visible"
       />
     </div>
   );
