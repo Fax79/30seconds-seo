@@ -1,7 +1,7 @@
 import destinations from '@/data/destinations.json';
 import { notFound } from 'next/navigation';
 
-// --- Tipi aggiornati in base al nuovo JSON ---
+// --- Tipi aggiornati ---
 type Widget = {
   type: string;
   label: string;
@@ -18,8 +18,6 @@ type Section = {
   widget?: Widget | null;
 };
 
-// Se hai un file di tipi separato, aggiorna anche lì l'interfaccia Destination
-// Qui faccio un cast rapido per brevità nel componente
 type CityData = {
   slug: string;
   meta_title: string;
@@ -57,14 +55,12 @@ export default async function CityPage({ params }: Props) {
 
   if (!rawCityData) { return notFound(); }
 
-  // Cast dei dati al nuovo tipo (assicurati che il JSON corrisponda!)
   const cityData = rawCityData as unknown as CityData;
 
   // Render Widget Dinamico
   const renderWidget = (widget: Widget) => {
     if (!widget || !widget.url) return null;
 
-    // Caso 1: Widget con Immagine (es. Banner Tiqets o Heymondo)
     if (widget.image) {
       return (
         <a 
@@ -78,7 +74,6 @@ export default async function CityPage({ params }: Props) {
       );
     }
 
-    // Caso 2: Widget "Card" (es. Voli, Hotel, Download PDF)
     return (
       <a 
         href={widget.url} 
@@ -100,7 +95,7 @@ export default async function CityPage({ params }: Props) {
 
   return (
     <div className="min-h-screen bg-gray-50 font-sans">
-      {/* HERO SECTION - Invariata */}
+      {/* HERO SECTION */}
       <header className="relative h-[60vh] flex items-center justify-center">
         <div className="absolute inset-0 bg-black/40 z-10"></div>
         <img src={cityData.hero_image} alt={cityData.hero_title} className="absolute inset-0 w-full h-full object-cover"/>
@@ -123,8 +118,6 @@ export default async function CityPage({ params }: Props) {
         <div className="space-y-12">
             {cityData.sections?.map((section, index) => (
                 <section key={index} className="border-b border-gray-100 last:border-0 pb-12 last:pb-0">
-                    
-                    {/* Titolo Sezione */}
                     <h2 className="text-2xl font-bold text-[#2C3E50] mb-4 flex items-center">
                         <span className="bg-[#E67E22] text-white w-8 h-8 rounded-full flex items-center justify-center text-sm mr-3 font-bold shadow-sm">
                             {index + 1}
@@ -132,12 +125,10 @@ export default async function CityPage({ params }: Props) {
                         {section.title}
                     </h2>
 
-                    {/* Contenuto Testuale (gestisce i newlines \n) */}
                     <div className="prose prose-lg text-gray-600 whitespace-pre-line leading-relaxed">
                         {section.content}
                     </div>
 
-                    {/* Widget Specifico per questa sezione (se presente) */}
                     {section.widget && (
                         <div className="mt-6">
                             {renderWidget(section.widget)}
@@ -147,10 +138,23 @@ export default async function CityPage({ params }: Props) {
             ))}
         </div>
 
-        {/* FOOTER INTERNO ALLA CARD (Opzionale, richiamo finale) */}
-        <div className="mt-16 pt-8 border-t border-gray-200 text-center">
-             <p className="text-gray-400 text-sm italic">Hai trovato utile questa guida?</p>
-             <a href="https://www.30secondstoguide.it" className="text-[#E67E22] font-semibold hover:underline text-sm">Crea il tuo itinerario personalizzato con AI</a>
+        {/* CALL TO ACTION FINALE */}
+        <div className="mt-24 mb-6">
+            <div className="bg-[#2C3E50] rounded-2xl p-10 text-center text-white shadow-2xl relative overflow-hidden group border-b-8 border-[#E67E22]">
+                {/* Effetto decorativo sfondo */}
+                <div className="absolute top-0 left-0 w-full h-full bg-white/5 opacity-0 group-hover:opacity-10 transition-opacity duration-500"></div>
+                
+                <h3 className="text-3xl md:text-4xl font-bold mb-8 tracking-tight">
+                    Hai trovato utile questa guida?
+                </h3>
+                
+                <a 
+                    href="https://www.30secondstoguide.it" 
+                    className="inline-block bg-[#E67E22] text-white font-bold text-lg py-4 px-10 rounded-full shadow-lg hover:bg-[#D35400] hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+                >
+                    CREA IL TUO ITINERARIO PERSONALIZZATO CON AI ➜
+                </a>
+            </div>
         </div>
 
       </main>
