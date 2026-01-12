@@ -7,30 +7,44 @@ type Props = {
 };
 
 export default function TravelWidget({ scriptSrc }: Props) {
-  const containerRef = useRef<HTMLDivElement>(null);
+  const iframeRef = useRef<HTMLIFrameElement>(null);
 
   useEffect(() => {
-    if (!containerRef.current) return;
+    const iframe = iframeRef.current;
+    if (!iframe) return;
 
-    // 1. Puliamo il contenitore (per evitare duplicati se cambi pagina)
-    containerRef.current.innerHTML = '';
+    const doc = iframe.contentWindow?.document;
+    if (!doc) return;
 
-    // 2. Creiamo il tag script manualmente
-    const script = document.createElement('script');
-    script.src = scriptSrc;
-    script.async = true;
-    script.charset = 'utf-8';
+    // TRUCCO: Scriviamo un mini-sito dentro l'iframe che contiene SOLO lo script.
+    // In questo modo il "document.write" funziona perché è isolato da React.
+    doc.open();
+    doc.write(`
+      <!DOCTYPE html>
+      <html>
+        <head>
+          <base target="_parent"> <style>
+            body { margin: 0; padding: 0; display: flex; justify-content: center; background-color: transparent; font-family: sans-serif; }
+          </style>
+        </head>
+        <body>
+          <script async src="${scriptSrc}" charset="utf-8"></script>
+        </body>
+      </html>
+    `);
+    doc.close();
 
-    // 3. Lo inseriamo fisicamente DENTRO questo div
-    containerRef.current.appendChild(script);
   }, [scriptSrc]);
 
   return (
-    <div 
-      ref={containerRef} 
-      className="w-full min-h-[200px] flex justify-center items-center bg-transparent"
-    >
-      {/* Il widget apparirà qui dentro */}
+    <div className="w-full flex justify-center">
+      <iframe 
+        ref={iframeRef} 
+        title="Travel Search Widget"
+        width="100%"
+        height="200" // Altezza di partenza
+        style={{ border: 'none', overflow: 'hidden', minHeight: '220px' }} 
+      />
     </div>
   );
 }
