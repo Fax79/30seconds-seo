@@ -26,5 +26,18 @@
       "insurance_url": "https://heymondo.it/?utm_medium=Afiliado&utm_source=30SECONDSTOGUIDE&utm_campaign=PRINCIPAL&cod_descuento=30SECONDSTOGUIDE&ag_campaign=TOKYO&agencia=JzPWeAXXi7s0b94oPYh2FmTwaWKFpiCp1a8PkqOn&redirect=TEMPORAL",
       "insurance_image": "/banners/heymondo-banner.png"
     }
+  },
+  {
+    "slug": "new-york",
+    "meta_title": "New York: Guida Turistica Completa & Itinerario 3 Giorni",
+    "meta_description": "Guida di New York: Statua della Libertà, Ponte di Brooklyn e Times Square. Itinerari, consigli su dove dormire e cosa mangiare.",
+    "hero_image": "https://images.unsplash.com/photo-1496442226666-8d4a0e62e6e9?q=80&w=1920&auto=format&fit=crop",
+    "hero_title": "NEW YORK: IL PALCOSCENICO",
+    "intro_text": "New York non è solo una città, è un'esperienza sensoriale avvolgente, un vortice incessante di energia. È il palcoscenico dei sogni, dove milioni di storie si intrecciano ogni giorno, un inno alla diversità umana e all'ambizione senza limiti. Dai suoi grattacieli che sfidano le nuvole, specchiandosi l'uno nell'altro in un balletto di luci e geometrie, alle sue strade brulicanti che vibrano di vita multiculturale, ogni angolo racconta una narrazione di speranza, di cadute e di rinascite. E' una città che non dorme mai, un laboratorio costante di arte, innovazione e cultura, dove il classico si fonde con l'avanguardia in un eclettismo che non smette mai di sorprendere. Camminare per le sue vie significa percepire un'urgenza vibrante, un desiderio di futuro, ma anche un profondo rispetto per le radici che l'hanno plasmata, rendendola un crogiolo irresistibile di idee e aspirazioni da ogni angolo del globo.",
+    "day_1_title": "Lady Liberty, Wall Street & Brooklyn Bridge",
+    "day_1_content": "Iniziate la giornata con una visita emozionante alla Statua della Libertà e a Ellis Island partendo da Battery Park.\n\nNel pomeriggio, esplorate il Financial District, passeggiando per Wall Street e riflettendo al 9/11 Memorial.\n\nAl tramonto, attraversate a piedi il magnifico Ponte di Brooklyn per godervi lo skyline illuminato e cenate a Brooklyn Heights.",
+    "widgets": {
+      "script_src": "https://tpemb.com/content?currency=eur&trs=476244&shmarker=686826.NY&locale=it&default_destination=NYC&stops=any&show_hotels=true&powered_by=true&border_radius=0&plain=true&color_button=%2300A991&color_button_text=%23ffffff&promo_id=3414&campaign_id=111"
+    }
   }
 ]
