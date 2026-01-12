@@ -1,25 +1,20 @@
 'use client';
 
-interface TravelWidgetProps {
-  url: string;
-}
-
-export default function TravelWidget({ url }: TravelWidgetProps) {
+export default function TravelWidget() {
   return (
     <div style={{ 
       width: '100%', 
-      minHeight: '500px', 
-      margin: '40px 0', 
-      backgroundColor: '#f9f9f9', 
-      border: '2px solid #e2e8f0', 
-      borderRadius: '16px', 
-      overflow: 'hidden' 
+      height: '500px', 
+      backgroundColor: 'red', 
+      border: '10px solid black',
+      display: 'block',
+      visibility: 'visible',
+      opacity: 1,
+      margin: '50px 0'
     }}>
-      <iframe 
-        src={url} 
-        title="Widget Voli"
-        style={{ width: '100%', height: '500px', border: 'none' }}
-      />
+      <h1 style={{ color: 'white', textAlign: 'center', paddingTop: '200px' }}>
+        SE VEDI QUESTO ROSSO, IL COMPONENTE FUNZIONA
+      </h1>
     </div>
   );
 }

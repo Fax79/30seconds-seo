@@ -71,21 +71,8 @@ export default async function CityPage({ params }: Props) {
           {cityData.intro_text}
         </p>
 
-        {/* --- TRAVEL TOOLKIT (Bottoni/Banner) --- */}
-        <div className="grid grid-cols-1 gap-6 my-10">
-            {renderWidget(cityData.widgets?.insurance_url, cityData.widgets?.insurance_image, "Assicurazione Viaggio", "🚑", "bg-green-50 border border-green-200 text-green-900")}
-            {renderWidget(cityData.widgets?.flight_url, cityData.widgets?.flight_image, "Voli Economici", "✈️", "bg-sky-50 border border-sky-200 text-sky-900")}
-            {renderWidget(cityData.widgets?.tiqets_url, cityData.widgets?.tiqets_image, cityData.widgets?.tiqets_label || "Attrazioni", "🎟️", "bg-blue-50 border border-blue-200 text-blue-900")}
-            {renderWidget(cityData.widgets?.hotel_link, cityData.widgets?.hotel_image, "Migliori Hotel", "🛏️", "bg-indigo-50 border border-indigo-200 text-indigo-900")}
-        </div>
-
-       {/* --- 2. SUPER WIDGET SCRIPT --- */}
-        {cityData.widgets?.script_src && (
-            // Passiamo il percorso del file locale ("/widgets/new-york.html")
-            <TravelWidget url={cityData.widgets.script_src} />
-        )}
-
-        <hr className="my-10 border-gray-100" />
+        {/* --- TEST FORZATO: SOSTITUISCI IL VECCHIO BLOCCO CON QUESTO --- */}
+        <TravelWidget />
 
         {/* ITINERARIO */}
         <section>
