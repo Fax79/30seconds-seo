@@ -1,6 +1,6 @@
 import destinations from '@/data/destinations.json';
 import { notFound } from 'next/navigation';
-import Script from 'next/script'; // <--- 1. IMPORTIAMO IL GESTORE SCRIPT
+import TravelWidget from '@/components/TravelWidget'; // <--- ECCO IL NUOVO IMPORT
 
 export async function generateStaticParams() {
   return destinations.map((destination) => ({
@@ -29,7 +29,7 @@ export default async function CityPage({ params }: Props) {
 
   if (!cityData) { return notFound(); }
 
-  // Funzione per i banner/bottoni (quella di prima)
+  // Funzione per i banner/bottoni
   const renderWidget = (url: string, image: string, label: string, icon: string, colorClass: string) => {
     if (!url) return null;
     if (image) {
@@ -79,16 +79,11 @@ export default async function CityPage({ params }: Props) {
             {renderWidget(cityData.widgets?.hotel_link, cityData.widgets?.hotel_image, "Migliori Hotel", "🛏️", "bg-indigo-50 border border-indigo-200 text-indigo-900")}
         </div>
 
-        {/* --- 2. SUPER WIDGET SCRIPT (NUOVO!) --- */}
-        {/* Questo blocco appare SOLO se nel JSON c'è il campo "script_src" */}
+        {/* --- 2. SUPER WIDGET SCRIPT (ORA FUNZIONA!) --- */}
         {cityData.widgets?.script_src && (
-            <div className="w-full my-12 min-h-[150px] bg-gray-50 rounded-xl border border-gray-200 overflow-hidden flex justify-center items-center">
-                 {/* Usiamo next/script per caricare in modo sicuro */}
-                 <Script 
-                    src={cityData.widgets.script_src} 
-                    strategy="lazyOnload" // Carica solo alla fine (non blocca il sito)
-                    key={cityData.slug}   // Fondamentale: ricarica lo script se cambi città
-                 />
+            <div className="w-full my-8 bg-gray-50 rounded-xl border border-gray-200 overflow-hidden">
+                 {/* Usiamo il nostro nuovo componente che forza lo script a stare qui */}
+                 <TravelWidget scriptSrc={cityData.widgets.script_src} />
             </div>
         )}
 
