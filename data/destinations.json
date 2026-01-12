@@ -5,13 +5,66 @@
     "meta_description": "Scopri l'anima di Roma: dal Colosseo a Trastevere. Guida pratica per italiani con itinerario, hotel e biglietti.",
     "hero_image": "https://images.unsplash.com/photo-1552832230-c0197dd311b5?q=80&w=1920&auto=format&fit=crop",
     "hero_title": "ROMA: L'ETERNA",
-    "intro_text": "Roma, la Città Eterna, non è semplicemente una destinazione, ma un'esperienza profonda che risveglia i sensi e l'intelletto. Ogni strada lastricata di sampietrini, ogni facciata secolare e ogni piazza maestosa narra storie millenarie di imperatori e papi, artisti geniali e gente comune, in un susseguirsi ininterrotto di epoche gloriose e sfide quotidiane. Camminare per Roma significa calpestare la storia, ammirare l'arte che si fonde con l'architettura in ogni angolo, e lasciarsi avvolgere da un'atmosfera unica, un connubio di grandezza antica e vivace modernità. È un luogo dove il sacro e il profano danzano in un balletto eterno, dove la grandezza del Colosseo si contrappone alla familiarità di una trattoria nascosta, e dove l'eco della 'dolce vita' risuona ancora tra i vicoli del centro. Roma è un'anima complessa, caotica e magnifica, capace di incantare e stupire, invitando il viaggiatore a perdersi nelle sue infinite meraviglie per scoprire la propria, personale, versione della Città Eterna.",
-    "day_1_title": "Il Cuore Antico: Colosseo & Fori",
-    "day_1_content": "Inizia la tua avventura dal simbolo indiscusso: il Colosseo. Arriva presto (8:30) per evitare la folla oceanica.\n\nDopo aver ammirato l'anfiteatro, prosegui verso i Fori Imperiali, camminando letteralmente sopra la storia. Non perderti la vista dal colle Palatino: è lì che Romolo fondò la città.\n\nPer pranzo, evita i trappoloni turistici proprio davanti all'uscita e dirigiti verso il rione Monti per una carbonara autentica.",
-    "widgets": {
-      "tiqets_url": "https://tiqets.tpx.lt/QPyOzQcX",
-      "tiqets_image": "/banners/tiqets-banner.png"
-    }
+    "intro_text": "Roma, la Città Eterna, non è semplicemente una destinazione, ma un'esperienza profonda. Ogni strada lastricata di sampietrini narra storie millenarie. Camminare per Roma significa calpestare la storia, dove la grandezza del Colosseo si contrappone alla familiarità di una trattoria nascosta.",
+    "sections": [
+      {
+        "title": "Quartieri e Atmosfere",
+        "content": "Roma è un mosaico di quartieri. Il **Centro Storico** (Navona, Pantheon) è un museo a cielo aperto, ideale per chi cerca l'immersione nella storia. **Trastevere**, oltre il fiume, offre un'atmosfera bohémien e autentica, trasformandosi la sera nel fulcro della movida.",
+        "widget": null
+      },
+      {
+        "title": "Dove Dormire",
+        "content": "**In coppia:** Il Centro Storico è imbattibile per una fuga romantica, con le attrazioni a portata di mano.\n**In famiglia:** Il quartiere Prati, vicino al Vaticano, è tranquillo, residenziale e sicuro.\n**Con amici:** La zona Termini è pratica per gli spostamenti, mentre San Lorenzo offre vita notturna a prezzi accessibili.",
+        "widget": {
+          "type": "hotel",
+          "label": "Offerte Hotel Roma",
+          "subtitle": "Verifica disponibilità su Expedia",
+          "url": "https://www.expedia.it/Roma-Hotel",
+          "icon": "🏨",
+          "colorClass": "bg-blue-600 text-white"
+        }
+      },
+      {
+        "title": "Gastronomia Romana",
+        "content": "La cucina romana è un inno alla semplicità.\n- **Cacio e Pepe:** Tonnarelli, Pecorino Romano e pepe nero in una crema avvolgente.\n- **Carbonara:** Guanciale croccante, uova, pecorino e pepe. Niente panna!\nPer un'esperienza vera, cercate le trattorie a conduzione familiare a Trastevere o Testaccio.",
+        "widget": null
+      },
+      {
+        "title": "Attrazioni Imperdibili",
+        "content": "**Colosseo:** Il simbolo eterno. Arrivate alle 8:30 per evitare la folla.\n**Musei Vaticani:** Ospitano la Cappella Sistina di Michelangelo. La prenotazione online è fondamentale.\n**Fontana di Trevi:** Lanciate una moneta per assicurarvi il ritorno a Roma.",
+        "widget": {
+          "type": "ticket",
+          "label": "Biglietti Salta Coda",
+          "subtitle": "Colosseo e Vaticano su Tiqets",
+          "url": "https://tiqets.tpx.lt/QPyOzQcX",
+          "image": "/banners/tiqets-banner.png"
+        }
+      },
+      {
+        "title": "Itinerario 3 Giorni",
+        "content": "**Giorno 1 (Antica Roma):** Colosseo, Foro Romano e Palatino. Tramonto al Giardino degli Aranci e cena a Trastevere.\n**Giorno 2 (Vaticano):** Piazza San Pietro, Cupola e Musei Vaticani. Sera a Castel Sant'Angelo.\n**Giorno 3 (Barocco):** Pantheon, Piazza Navona, Fontana di Trevi e shopping a Piazza di Spagna.",
+        "widget": {
+          "type": "guide",
+          "label": "Scarica Guida PDF",
+          "subtitle": "Itinerario completo e mappa",
+          "url": "https://www.30secondstoguide.it",
+          "icon": "⬇️",
+          "colorClass": "bg-[#E67E22] text-white"
+        }
+      },
+      {
+        "title": "Info Pratiche",
+        "content": "Roma ha due aeroporti: Fiumicino (internazionale) e Ciampino (low cost). Attenzione ai borseggiatori nelle zone affollate. L'acqua delle fontanelle (\"nasoni\") è potabile, portate una borraccia.",
+        "widget": {
+          "type": "insurance",
+          "label": "Assicurazione Viaggio",
+          "subtitle": "Sconto 10% con Heymondo",
+          "url": "https://heymondo.it/...",
+          "icon": "🛡️",
+          "colorClass": "bg-green-600 text-white"
+        }
+      }
+    ]
   },
   {
     "slug": "tokyo",
@@ -19,12 +72,65 @@
     "meta_description": "Scopri l'anima di Tokyo: dai templi di Asakusa ai neon di Shinjuku. Itinerario di 3 giorni, consigli su dove dormire e cosa mangiare.",
     "hero_image": "https://images.unsplash.com/photo-1503899036084-c55cdd92da26?q=80&w=1920&auto=format&fit=crop",
     "hero_title": "TOKYO: L'ANIMA ETERNA",
-    "intro_text": "Tokyo non è semplicemente una metropoli, è un universo in continua espansione, un caleidoscopio di luci al neon e tradizioni secolari che convivono in un equilibrio dinamico e spesso sorprendente. Qui, i ritmi frenetici della modernità più spinta si fondono con la serena contemplazione dei giardini zen e la solennità dei santuari shintoisti, creando un'esperienza che stimola tutti i sensi e sfida ogni preconcetto. L'anima di Tokyo risiede in questa sua capacità unica di guardare costantemente al futuro senza mai dimenticare il profondo rispetto per la sua storia e la sua cultura millenaria. È una città che ti abbraccia con la sua energia travolgente, ti confonde con la sua complessità e, alla fine, ti conquista con la sua inesauribile meraviglia, lasciando un segno indelebile in chiunque si avventuri nelle sue innumerevoli dimensioni.",
-    "day_1_title": "Asakusa, Ueno & Ginza: Tradizione e Lusso",
-    "day_1_content": "Iniziate la giornata ad Asakusa, visitando il maestoso Tempio Sensoji e passeggiando lungo la vivace Nakamise Dori per immergervi nella Tokyo più tradizionale.\n\nNel pomeriggio, prendete il treno per Ueno. Qui potete visitare il Parco di Ueno e il Museo Nazionale di Tokyo.\n\nLa sera, dirigetevi a Ginza, il quartiere dello shopping di lusso. Passeggiate per le strade illuminate, ammirate le vetrine scintillanti e cenate in uno dei suoi eleganti ristoranti.",
-    "widgets": {
-      "insurance_url": "https://heymondo.it/?utm_medium=Afiliado&utm_source=30SECONDSTOGUIDE&utm_campaign=PRINCIPAL&cod_descuento=30SECONDSTOGUIDE&ag_campaign=TOKYO&agencia=JzPWeAXXi7s0b94oPYh2FmTwaWKFpiCp1a8PkqOn&redirect=TEMPORAL",
-      "insurance_image": "/banners/heymondo-banner.png"
-    }
+    "intro_text": "Tokyo non è semplicemente una metropoli, è un universo in continua espansione. Qui, i ritmi frenetici della modernità si fondono con la serena contemplazione dei giardini zen e la solennità dei santuari shintoisti. È una città che guarda al futuro senza dimenticare la sua storia millenaria [cite: 311-313].",
+    "sections": [
+      {
+        "title": "Quartieri e Atmosfere",
+        "content": "Tokyo è una città di contrasti. **Shinjuku** è il cuore pulsante futuristico, dominato da grattacieli e luci al neon, perfetto per chi cerca energia [cite: 320-321]. Al contrario, **Asakusa** è un'oasi di pace che trasporta nella vecchia Edo, con il tempio Sensoji e le sue strade tradizionali [cite: 327-328].",
+        "widget": null
+      },
+      {
+        "title": "Dove Dormire",
+        "content": "**In famiglia:** Ueno è eccellente, con parchi, musei e lo zoo [cite: 334].\n**In coppia:** Ginza offre eleganza e lusso, ideale per una fuga romantica [cite: 337].\n**Con amici:** Shibuya è il centro della movida giovanile e della moda [cite: 342].\n**Senior:** Asakusa offre tranquillità e facilità di esplorazione a piedi[cite: 347].",
+        "widget": {
+          "type": "hotel",
+          "label": "Offerte Hotel Tokyo",
+          "subtitle": "Verifica disponibilità su Expedia",
+          "url": "https://www.expedia.it/Tokyo-Hotel",
+          "icon": "🏨",
+          "colorClass": "bg-blue-600 text-white"
+        }
+      },
+      {
+        "title": "Gastronomia",
+        "content": "**Sushi:** Provate il pesce freschissimo al Mercato Esterno di Tsukiji[cite: 370].\n**Ramen:** Una zuppa iconica. Cercate catene di qualità come Ichiran o Afuri [cite: 369].\n**Izakaya:** Le trattorie giapponesi dove gustare piatti tradizionali e sake in un'atmosfera informale[cite: 371].",
+        "widget": null
+      },
+      {
+        "title": "Attrazioni Imperdibili",
+        "content": "**Tempio Sensoji:** Il più antico di Tokyo, con la famosa lanterna rossa [cite: 385].\n**Tokyo Skytree:** Viste panoramiche mozzafiato da 450 metri d'altezza [cite: 392].\n**Shibuya Crossing:** L'incrocio più trafficato al mondo, simbolo della frenesia di Tokyo[cite: 411].",
+        "widget": {
+          "type": "ticket",
+          "label": "Attrazioni Tokyo",
+          "subtitle": "Biglietti ufficiali su Tiqets",
+          "url": "https://tiqets.tpx.lt/QPyOzQcX",
+          "image": "/banners/tiqets-banner.png"
+        }
+      },
+      {
+        "title": "Itinerario 3 Giorni",
+        "content": "**Giorno 1:** Tradizione. Asakusa (Tempio Sensoji), Parco di Ueno e serata di lusso a Ginza [cite: 482-486].\n**Giorno 2:** Giovani e Pop. Shibuya Crossing, Santuario Meiji Jingu e la movida di Shinjuku [cite: 490-495].\n**Giorno 3:** Futuro e Mare. Mercato di Tsukiji per colazione e pomeriggio all'isola artificiale di Odaiba [cite: 498-499].",
+        "widget": {
+          "type": "guide",
+          "label": "Scarica Guida PDF",
+          "subtitle": "Mappa metro e consigli extra",
+          "url": "https://www.30secondstoguide.it",
+          "icon": "⬇️",
+          "colorClass": "bg-[#E67E22] text-white"
+        }
+      },
+      {
+        "title": "Info Pratiche",
+        "content": "Dall'aeroporto di Narita usate il Narita Express; da Haneda la Monorail [cite: 451-452]. Per i trasporti urbani acquistate una carta Suica o Pasmo[cite: 457]. Tokyo è una città sicurissima[cite: 459]. Le prese sono di tipo A (piatte), serve adattatore[cite: 473].",
+        "widget": {
+          "type": "insurance",
+          "label": "Assicurazione Giappone",
+          "subtitle": "Sanità privata cara? Sconto 10% Heymondo",
+          "url": "https://heymondo.it/?utm_medium=Afiliado&utm_source=30SECONDSTOGUIDE&utm_campaign=PRINCIPAL&cod_descuento=30SECONDSTOGUIDE&ag_campaign=TOKYO",
+          "icon": "🛡️",
+          "colorClass": "bg-green-700 text-white"
+        }
+      }
+    ]
   }
 ]
