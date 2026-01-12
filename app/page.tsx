@@ -82,7 +82,7 @@ export default async function CityPage({ params }: Props) {
        {/* --- 2. SUPER WIDGET SCRIPT --- */}
         {cityData.widgets?.script_src && (
             // Passiamo il percorso del file locale ("/widgets/new-york.html")
-            <TravelWidget widgetPath={cityData.widgets.script_src} />
+            <TravelWidget url={cityData.widgets.script_src} />
         )}
 
         <hr className="my-10 border-gray-100" />
