@@ -1,6 +1,5 @@
 import destinations from '@/data/destinations.json';
 import { notFound } from 'next/navigation';
-import TravelWidget from '@/components/TravelWidget';
 
 export async function generateStaticParams() {
   return destinations.map((destination) => ({
@@ -29,7 +28,6 @@ export default async function CityPage({ params }: Props) {
 
   if (!cityData) { return notFound(); }
 
-  // Funzione per i banner/bottoni
   const renderWidget = (url: string, image: string, label: string, icon: string, colorClass: string) => {
     if (!url) return null;
     if (image) {
@@ -52,8 +50,6 @@ export default async function CityPage({ params }: Props) {
 
   return (
     <div className="min-h-screen bg-gray-50 font-sans">
-      
-      {/* HERO SECTION */}
       <header className="relative h-[60vh] flex items-center justify-center">
         <div className="absolute inset-0 bg-black/50 z-10"></div>
         <img src={cityData.hero_image} alt={cityData.hero_title} className="absolute inset-0 w-full h-full object-cover"/>
@@ -63,18 +59,17 @@ export default async function CityPage({ params }: Props) {
         </div>
       </header>
 
-      {/* CONTENUTO */}
       <main className="max-w-3xl mx-auto px-6 py-12 bg-white -mt-20 relative z-30 rounded-t-3xl shadow-xl">
-        
-        {/* Intro */}
         <p className="text-lg text-gray-700 leading-relaxed mb-8 first-letter:text-4xl first-letter:font-bold first-letter:mr-1 first-letter:float-left first-letter:text-[#E67E22]">
           {cityData.intro_text}
         </p>
 
-        {/* --- TEST FORZATO: SOSTITUISCI IL VECCHIO BLOCCO CON QUESTO --- */}
-        <TravelWidget />
+        {/* BANNERS SECTION */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-12">
+            {cityData.widgets?.flight && renderWidget(cityData.widgets.flight.url, cityData.widgets.flight.image, "Voli", "✈️", "bg-blue-600 text-white")}
+            {cityData.widgets?.hotel && renderWidget(cityData.widgets.hotel.url, cityData.widgets.hotel.image, "Hotel", "🏨", "bg-green-600 text-white")}
+        </div>
 
-        {/* ITINERARIO */}
         <section>
             <h2 className="text-2xl font-bold text-[#2C3E50] mb-4 flex items-center">
                 <span className="bg-[#E67E22] text-white w-8 h-8 rounded-full flex items-center justify-center text-sm mr-3 font-bold">1</span>
@@ -85,7 +80,6 @@ export default async function CityPage({ params }: Props) {
             </div>
         </section>
 
-        {/* THE WALL */}
         <div className="bg-gradient-to-br from-[#E67E22] to-[#D35400] p-8 rounded-2xl text-center text-white shadow-lg mt-12">
             <h3 className="text-2xl font-bold mb-2">Vuoi l'itinerario completo?</h3>
             <p className="mb-6 text-white/90">Scarica la <strong>Guida PDF Completa</strong> con i giorni 2, 3 e i consigli sui ristoranti.</p>
