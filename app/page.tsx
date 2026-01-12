@@ -79,12 +79,10 @@ export default async function CityPage({ params }: Props) {
             {renderWidget(cityData.widgets?.hotel_link, cityData.widgets?.hotel_image, "Migliori Hotel", "🛏️", "bg-indigo-50 border border-indigo-200 text-indigo-900")}
         </div>
 
-        {/* --- 2. SUPER WIDGET SCRIPT (ORA FUNZIONA!) --- */}
+       {/* --- 2. SUPER WIDGET SCRIPT --- */}
         {cityData.widgets?.script_src && (
-            <div className="w-full my-8 bg-gray-50 rounded-xl border border-gray-200 overflow-hidden">
-                 {/* Usiamo il nostro nuovo componente che forza lo script a stare qui */}
-                 <TravelWidget scriptSrc={cityData.widgets.script_src} />
-            </div>
+            // Passiamo il percorso del file locale ("/widgets/new-york.html")
+            <TravelWidget widgetPath={cityData.widgets.script_src} />
         )}
 
         <hr className="my-10 border-gray-100" />
