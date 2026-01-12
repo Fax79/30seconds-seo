@@ -35,7 +35,7 @@
           "label": "Biglietti Musei e Attrazioni",
           "subtitle": "Acquista su Tiqets",
           "url": "https://tiqets.tpx.lt/QPyOzQcX",
-          "image": "/banners/tiqets-banner.png"
+          "image": "/banners/Roma-tiqets-banner.png"
         }
       },
       {
@@ -92,7 +92,12 @@
       {
         "title": "Attrazioni",
         "content": "Tempio Sensoji (Asakusa): Il più antico tempio buddista di Tokyo, dedicato a Kannon, la dea della misericordia. La sua imponente porta d'ingresso, Kaminarimon, con la sua lanterna rossa gigante, è un simbolo iconico della città. Si accede attraverso la Nakamise Dori, una vivace strada piena di bancarelle che vendono souvenir e snack tradizionali. Il complesso include una pagoda a cinque piani e numerosi edifici minori. Orari di apertura: Il complesso del tempio è sempre aperto. La sala principale apre dalle 6:00 (6:30 da ottobre a marzo) alle 17:00. Prezzi biglietti: Ingresso gratuito.\n\nTokyo Skytree: Una delle strutture più alte del mondo, questa torre di trasmissione offre viste panoramiche mozzafiato su Tokyo e oltre. Dispone di due ponti di osservazione, il Tembo Deck a 350 metri e il Tembo Galleria a 450 metri, che offrono prospettive incredibili sulla vastità della metropoli. Ai suoi piedi si trova il centro commerciale Solamachi. Orari di apertura: Dalle 9:00 alle 21:00 (ultimo ingresso alle 20:00). Gli orari possono variare in base alla stagione e agli eventi speciali. Prezzi biglietti: Per il Tembo Deck (350m) il costo di ingresso si aggira attorno ai 2100 JPY nei giorni feriali e 2300 JPY nei fine settimana/festivi. Per il Tembo Deck e Tembo Galleria (450m) combinato, il costo è di circa 3100 JPY nei giorni feriali e 3400 JPY nei fine settimana/festivi. Esistono anche biglietti Fast Ticket per i turisti stranieri a prezzi più elevati.\n\nPalazzo Imperiale e Giardini Orientali: Sebbene il Palazzo Imperiale stesso sia chiuso al pubblico per la maggior parte dell'anno (solo alcune aree sono accessibili con tour prenotati in anticipo), i Giardini Orientali (Higashi Gyoen) dell'ex Castello di Edo sono aperti ai visitatori. Offrono un'oasi di tranquillità nel cuore di Tokyo, con rovine storiche, fossati e giardini ben curati che mostrano la bellezza dell'architettura paesaggistica giapponese. Orari di apertura: Dalle 9:00 alle 16:00 o 16:30 (a seconda della stagione, chiuso lunedì e venerdì e in alcune festività). Prezzi biglietti: Ingresso gratuito.\n\nSantuario Meiji Jingu (Shibuya): Un santuario shintoista dedicato all'Imperatore Meiji e all'Imperatrice Shoken, situato in un vasto e lussureggiante parco forestale nel cuore di Shibuya. Si accede attraverso un imponente torii (portale sacro) e il percorso conduce attraverso una fitta foresta creata con alberi donati da tutto il Giappone. È un luogo di pace e spiritualità, dove è possibile assistere a matrimoni shintoisti tradizionali. Orari di apertura: Aperto dall'alba al tramonto (gli orari variano con le stagioni). Prezzi biglietti: Ingresso gratuito. L'ingresso al tesoro e al giardino interno ha un costo simbolico di circa 500 JPY.\n\nShibuya Crossing: Non un monumento nel senso tradizionale, ma un'attrazione iconica e imperdibile di Tokyo. È l'incrocio pedonale più trafficato del mondo, dove migliaia di persone attraversano contemporaneamente da ogni direzione al verde del semaforo. Un'esperienza visiva e sensoriale unica, simbolo della frenesia e della modernità di Tokyo. Orari di apertura: Sempre accessibile. Prezzi biglietti: Gratuito. Il miglior punto di osservazione è dal secondo piano dello Starbucks o da altri caffè affacciati sull'incrocio.",
-        "widget": null
+        "widget": {
+          "type": "ticket",
+          "label": "Biglietti Musei e Attrazioni",
+          "subtitle": "Acquista su Tiqets",
+          "url": "https://tiqets.tpx.lt/zziSmVJP",
+          "image": "/banners/Tokyo-tiqets-banner.png"
       },
       {
         "title": "I mercati",
