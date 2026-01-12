@@ -6,21 +6,16 @@ type Props = {
 
 export default function TravelWidget({ url }: Props) {
   return (
-    <div className="w-full my-12 overflow-hidden rounded-2xl shadow-sm border border-gray-100 bg-white">
-      <iframe 
-        src={url} 
-        title="Widget Viaggi"
-        // Impostiamo un'altezza fissa molto chiara
-        style={{ 
-          width: '100%', 
-          height: '400px', 
-          border: 'none',
-          display: 'block'
-        }}
-        // Questo impedisce che l'altezza venga ignorata
-        height="400"
-        scrolling="no"
-      />
+    <div className="w-full my-12 flex justify-center">
+      <div className="w-full max-w-[800px] h-[500px] bg-gray-50 rounded-2xl overflow-hidden shadow-inner border border-gray-100">
+        <iframe 
+          src={url} 
+          title="Widget Viaggi"
+          width="100%" 
+          height="100%" 
+          style={{ border: 'none' }}
+        />
+      </div>
     </div>
   );
 }
