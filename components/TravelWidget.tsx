@@ -1,38 +1,36 @@
 'use client';
 
-import { useEffect } from 'react';
-
 type Props = {
   url: string;
 };
 
 export default function TravelWidget({ url }: Props) {
-  useEffect(() => {
-    // Rimuoviamo eventuali script vecchi per evitare conflitti
-    const existingScript = document.getElementById('tp-widget-script');
-    if (existingScript) {
-      existingScript.remove();
-    }
-
-    const script = document.createElement('script');
-    script.id = 'tp-widget-script';
-    script.src = url;
-    script.async = true;
-    script.charset = 'utf-8';
-    
-    // Lo iniettiamo nel body così è libero di agire su tutta la pagina
-    document.body.appendChild(script);
-
-    return () => {
-      const scriptToRemove = document.getElementById('tp-widget-script');
-      if (scriptToRemove) scriptToRemove.remove();
-    };
-  }, [url]);
+  // Costruiamo l'HTML che Travelpayouts si aspetta di vedere
+  const iframeContent = `
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <base target="_parent">
+        <style>
+          body { margin: 0; padding: 0; background: transparent; display: flex; justify-content: center; }
+        </style>
+      </head>
+      <body>
+        <script async src="${url}" charset="utf-8"></script>
+      </body>
+    </html>
+  `;
 
   return (
-    <div className="w-full my-12 flex justify-center min-h-[250px]">
-      {/* Questo div è dove il widget cercherà di "agganciarsi" */}
-      <div className="tp-widget-wrapper w-full" />
+    <div className="w-full my-8 flex justify-center min-h-[400px]">
+      <iframe
+        srcDoc={iframeContent}
+        title="Widget Voli New York"
+        width="100%"
+        height="600"
+        style={{ border: 'none', overflow: 'hidden' }}
+        className="rounded-xl shadow-lg bg-white"
+      />
     </div>
   );
 }
