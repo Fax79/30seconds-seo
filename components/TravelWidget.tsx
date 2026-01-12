@@ -1,21 +1,25 @@
 'use client';
 
-type Props = {
+interface TravelWidgetProps {
   url: string;
-};
+}
 
-export default function TravelWidget({ url }: Props) {
+export default function TravelWidget({ url }: TravelWidgetProps) {
   return (
-    <div className="w-full my-12 flex justify-center">
-      <div className="w-full max-w-[800px] min-h-[500px] bg-gray-50 rounded-2xl overflow-hidden shadow-inner border border-gray-100">
-        <iframe 
-          src={url} 
-          title="Widget Viaggi"
-          width="100%" 
-          height="500px" 
-          style={{ border: 'none', display: 'block' }}
-        />
-      </div>
+    <div style={{ 
+      width: '100%', 
+      minHeight: '500px', 
+      margin: '40px 0', 
+      backgroundColor: '#f9f9f9', 
+      border: '2px solid #e2e8f0', 
+      borderRadius: '16px', 
+      overflow: 'hidden' 
+    }}>
+      <iframe 
+        src={url} 
+        title="Widget Voli"
+        style={{ width: '100%', height: '500px', border: 'none' }}
+      />
     </div>
   );
 }
