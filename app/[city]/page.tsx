@@ -144,13 +144,13 @@ export default async function CityPage({ params }: Props) {
                 {/* Effetto decorativo sfondo */}
                 <div className="absolute top-0 left-0 w-full h-full bg-white/5 opacity-0 group-hover:opacity-10 transition-opacity duration-500"></div>
                 
-                <h3 className="text-3xl md:text-4xl font-bold mb-8 tracking-tight">
+                <h3 className="relative z-10 text-3xl md:text-4xl font-bold mb-8 tracking-tight">
                     Hai trovato utile questa guida?
                 </h3>
                 
                 <a 
                     href="https://www.30secondstoguide.it" 
-                    className="inline-block bg-[#E67E22] text-white font-bold text-lg py-4 px-10 rounded-full shadow-lg hover:bg-[#D35400] hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+                    className="relative z-10 inline-block bg-[#E67E22] text-white font-bold text-lg py-4 px-10 rounded-full shadow-lg hover:bg-[#D35400] hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
                 >
                     CREA IL TUO ITINERARIO PERSONALIZZATO CON AI ➜
                 </a>
