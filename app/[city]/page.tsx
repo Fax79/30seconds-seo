@@ -61,8 +61,16 @@ export default async function CityPage({ params }: Props) {
     if (!widget || !widget.url) return null;
 
     // CASO 1: Script (Widget Voli)
-    if (widget.type === 'script') {
-      return <FlightWidget src={widget.url} />;
+      if (widget.type === 'script') {
+      return (
+        <div className="w-full">
+           {/* Se c'è una label, la mostra sopra lo script come titolo */}
+           {widget.label && (
+             <h4 className="font-bold text-xl mb-2 text-[#2C3E50]">{widget.label}</h4>
+           )}
+           <FlightWidget src={widget.url} />
+        </div>
+      );
     }
 
     // CASO 2: Banner Immagine
