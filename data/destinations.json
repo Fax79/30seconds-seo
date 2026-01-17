@@ -13,7 +13,6 @@
         "widget": {
           "type": "banner",
           "label": "Saily eSIM",
-          "subtitle": "Connessione Dati",
           "url": "https://saily.tpx.lt/Myxhqmox",
           "image": "https://insessionfilm.com/wp-content/uploads/2025/06/Saily-Banner.png"
         }
@@ -23,7 +22,7 @@
         "content": "Roma è un mosaico di quartieri, ognuno con la propria identità e un'atmosfera distintiva che si svela a chi sa osservare. Il contrasto principale si manifesta tra il cuore pulsante del centro storico, cristallizzazione della Roma imperiale e barocca, e l'energia più popolare e autentica dei quartieri al di là del Tevere.\n\nConfronto Zone:\nCentro Storico (Navona, Pantheon, Campo de' Fiori): Qui l'atmosfera è quella di una grandiosità senza tempo, un vero e proprio museo a cielo aperto dove ogni chiesa, fontana e palazzo racconta secoli di storia e capolavori artistici. Le piazze maestose si alternano a vicoli stretti e caratteristici, brulicanti di vita e ricchi di botteghe artigiane, ristoranti raffinati e boutique eleganti. È il cuore pulsante dell'arte e della cultura, dove la bellezza si svela ad ogni passo, invitando a passeggiate romantiche e scoperte inaspettate.\n\nTrastevere: Oltre il fiume, Trastevere offre un'atmosfera radicalmente diversa, più bohémien e autentica. Le sue strade tortuose e i suoi palazzi medievali, spesso adornati da edere e balconi fioriti, creano un labirinto affascinante dove il tempo sembra rallentare. Di giorno è un quartiere pittoresco e tranquillo, ideale per esplorare botteghe artigianali e gallerie d'arte, mentre di sera si trasforma nel fulcro della movida romana, con un'infinità di osterie tradizionali, bar vivaci e musica che si diffonde dalle piazze.\n\nChi ci va: Il Centro Storico è l'ideale per i viaggiatori che cercano l'immersione totale nella storia e nell'arte, per chi desidera avere le principali attrazioni a portata di mano e per chi ama un'eleganza classica e senza tempo. È perfetto per coppie in cerca di romanticismo e per chi si avvicina a Roma per la prima volta. Trastevere, invece, attrae chi cerca un'esperienza più \"romana\" e autentica, chi ama la vita notturna e i ritrovi meno formali. È molto popolare tra giovani, gruppi di amici e viaggiatori con uno spirito più libero e alla ricerca di un'atmosfera vivace e meno patinata.",
         "widget": {
           "type": "script",
-          "label": "Noleggio Auto",
+          "label": "Noleggia qui la tua auto",
           "url": "https://tpemb.com/content?trs=476244&shmarker=686826&locale=en&default_pick_up_location=ROM&powered_by=true&border_radius=5&plain=true&show_logo=true&color_background=%230b2033&color_button=%23e8b917&promo_id=4362&campaign_id=143"
         }
       },
@@ -33,7 +32,6 @@
         "widget": {
           "type": "banner",
           "label": "Expedia",
-          "subtitle": "Prenota il tuo soggiorno",
           "url": "https://www.expedia.it",
           "image": "https://upload.wikimedia.org/wikipedia/commons/d/d3/2023-Logo-Expedia.png"
         }
@@ -44,7 +42,6 @@
         "widget": {
           "type": "banner",
           "label": "TripAdvisor",
-          "subtitle": "Scopri i migliori ristoranti",
           "url": "https://www.tripadvisor.it/",
           "image": "https://upload.wikimedia.org/wikipedia/commons/0/02/TripAdvisor_Logo.svg"
         }
@@ -63,12 +60,22 @@
       {
         "title": "I mercati",
         "content": "I mercati di Roma sono luoghi vibranti e colorati, dove si può toccare con mano la vita quotidiana della città e assaporare l'autenticità dei prodotti locali.\n\nCampo de' Fiori: Questo è forse il mercato più iconico e antico di Roma, che si tiene ogni mattina (esclusa la domenica) nell'omonima piazza. Tra le statue e i caffè storici, si dispiegano banchi ricolmi di frutta e verdura fresca, spezie profumate, fiori colorati e prodotti tipici laziali come formaggi, salumi e pane appena sfornato. È un'esplosione di colori, profumi e voci, un'esperienza multisensoriale che cattura l'essenza della Roma più autentica e popolare. È un luogo ideale per fare acquisti gastronomici e immergersi nell'atmosfera romana.\n\nNuovo Mercato Testaccio: Situato nell'omonimo quartiere, il Nuovo Mercato Testaccio è un esempio eccellente di mercato moderno e coperto, che mantiene però un forte legame con la tradizione e la qualità. Qui si trovano banchi di prodotti freschi di altissima qualità, macellerie rinomate, pescherie fornitissime e, soprattutto, una straordinaria offerta di stand di street food gourmet. È il posto perfetto per assaggiare suppli, piatti di pasta, panini gourmet e specialità romane preparate al momento, in un ambiente vivace e contemporaneo. È molto amato sia dai locali che dai turisti più attenti alla buona tavola e ai sapori autentici.",
-        "widget": null
+        "widget": {
+          "type": "insurance",
+          "label": "Assicurazione Viaggio",
+          "subtitle": "Sconto 10% con Heymondo",
+          "url": "https://heymondo.it/?utm_medium=Afiliado&utm_source=30SECONDSTOGUIDE&utm_campaign=PRINCIPAL&cod_descuento=30SECONDSTOGUIDE&ag_campaign=ROMA&agencia=JzPWeAXXi7s0b94oPYh2FmTwaWKFpiCp1a8PkqOn&redirect=TEMPORAL",
+          "image": "/banners/heymondo-banner.png"
+        }
       },
       {
         "title": "Calendario Culturale",
         "content": "Roma offre un calendario culturale ricco e variegato, con eventi che animano la città durante tutto l'anno, celebrando la sua storia, la sua arte e le sue tradizioni.\n\nPasqua e Settimana Santa (Marzo/Aprile): La Settimana Santa a Roma è un'esperienza profondamente suggestiva, culminante con le celebrazioni pasquali in Vaticano, inclusa la Via Crucis al Colosseo presieduta dal Papa. La città si riempie di fedeli e turisti, e le funzioni religiose sono accompagnate da un'atmosfera di solennità e devozione.\n\nNatale di Roma (21 Aprile): Questa è la festa che celebra la fondazione di Roma, avvenuta, secondo la leggenda, il 21 aprile del 753 a.C. La città si anima con rievocazioni storiche, spettacoli di gladiatori al Circo Massimo, sfilate in costume e fuochi d'artificio, offrendo uno spettacolo affascinante che riporta indietro nel tempo all'epoca imperiale.\n\nEstate Romana (Giugno-Settembre): Un vasto programma di eventi culturali, concerti, proiezioni cinematografiche all'aperto, spettacoli teatrali e mostre che animano i parchi, le piazze e le rive del Tevere. L'Isola Tiberina, ad esempio, si trasforma in un polo di attrazione con bancarelle, ristoranti e un cinema all'aperto.\n\nFesta di San Giovanni (24 Giugno): Una delle feste popolari più antiche e sentite di Roma, celebrata nella piazza di San Giovanni in Laterano con canti, balli, bancarelle e, tradizionalmente, il consumo di lumache e vino. È un'occasione per vivere una Roma più popolare e folcloristica.\n\nNotte Bianca (Settembre): Una notte all'insegna dell'arte, della cultura e dello spettacolo, con musei, gallerie e negozi aperti fino a tarda notte, concerti e performance artistiche in tutta la città. È un evento che trasforma Roma in un palcoscenico a cielo aperto.\n\nFestival Internazionale del Film di Roma (Ottobre): Uno degli eventi cinematografici più importanti d'Italia, che attira star internazionali e propone proiezioni, incontri e dibattiti, trasformando l'Auditorium Parco della Musica e altre sedi in centri del cinema mondiale.",
-        "widget": null
+        "widget": {
+          "type": "script",
+          "label": "Cerca Voli",
+          "url": "https://tpemb.com/content?currency=eur&trs=476244&shmarker=686826&locale=it&default_destination=ROM&stops=any&show_hotels=true&powered_by=true&border_radius=0&plain=true&color_button=%2300A991&color_button_text=%23ffffff&promo_id=3414&campaign_id=111"
+        }
       },
       {
         "title": "Info Pratiche",
@@ -76,7 +83,6 @@
         "widget": {
           "type": "banner",
           "label": "Welcome Pickups",
-          "subtitle": "Transfer Aeroporto",
           "url": "https://tpx.lt/O5I4OrpX",
           "image": "https://phocuswright.blob.core.windows.net/pcw/WelcomePickupsLogo.png"
         }
@@ -144,7 +150,7 @@
       },
       {
         "title": "Info Pratiche",
-        "content": "Come arrivare: L'aeroporto internazionale principale per Tokyo è il Narita International Airport (NRT), situato a circa 60 chilometri a est della città. Numerose compagnie aeree tradizionali come Alitalia, Japan Airlines e ANA offrono voli diretti o con scalo dall'Italia. Diverse compagnie aeree low cost e tradizionali internazionali servono anche il Tokyo Haneda Airport (HND), molto più vicino al centro città e quindi spesso preferito. Dall'Italia, i voli diretti sono meno comuni per Haneda, ma ci sono molte opzioni con scalo. Da Narita, si può raggiungere il centro con il Narita Express (treno veloce), il Keisei Skyliner (treno espresso) o autobus limousina. Da Haneda, si possono usare il Tokyo Monorail o il Keikyu Line per raggiungere vari punti della città.\n\nTrasporti: Il sistema di trasporti pubblici di Tokyo è uno dei più efficienti e complessi al mondo, basato su una fitta rete di metropolitana e treni urbani. Le compagnie principali sono Japan Railways (JR) e Tokyo Metro. Acquistare una carta ricaricabile (Suica o Pasmo) è altamente raccomandato per viaggiare facilmente su tutte le linee. I taxi sono disponibili ma costosi. Camminare è spesso il modo migliore per esplorare i singoli quartieri.\n\nSicurezza: Tokyo è una delle città più sicure al mondo. Il tasso di criminalità è estremamente basso. È possibile passeggiare tranquillamente a qualsiasi ora del giorno e della notte. Le piccole truffe ai turisti sono rare, ma è sempre consigliabile prestare attenzione ai propri effetti personali in luoghi affollati.\n\nClima: I migliori periodi per visitare Tokyo sono la primavera (marzo-maggio) e l'autunno (settembre-novembre). In primavera il clima è mite e si può assistere alla fioritura dei ciliegi. L'autunno offre temperature piacevoli e foliage spettacolare. L'estate (giugno-agosto) è calda e umida, con possibilità di tifoni in tarda estate. L'inverno (dicembre-febbraio) è freddo e secco, con nevicate occasionali ma cieli spesso sereni.\n\nVisti e requisiti: I cittadini italiani non necessitano di visto per soggiorni turistici inferiori a 90 giorni. È sufficiente un passaporto valido per tutta la durata del soggiorno e un biglietto aereo di ritorno o di proseguimento. Assicuratevi di controllare eventuali aggiornamenti sulle politiche di ingresso prima della partenza.\n\nFuso orario: Tokyo si trova nel fuso orario di Japan Standard Time (JST), che è UTC+9. Non applica l'ora legale. Questo significa che rispetto all'Italia, Tokyo è generalmente 8 ore avanti quando in Italia vige l'ora solare e 7 ore avanti quando vige l'ora legale.\n\nConsigli utili: La valuta locale è il JPY (Yen giapponese). È consigliabile avere sempre un po' di contanti, poiché non tutti i piccoli esercizi accettano carte di credito. Le prese elettriche in Giappone sono di Tipo A e B, a due o tre poli piatti, con una tensione di 100V e una frequenza di 50/60 Hz (a seconda della regione). È necessario un adattatore e, se i vostri apparecchi non supportano i 100V, un convertitore di tensione.",
+        "content": "Come arrivare: L'aeroporto internazionale principale per Tokyo è il Narita International Airport (NRT), situato a circa 60 chilometri a est della città. Numerose compagnie aeree tradizionali come Alitalia, Japan Airlines e ANA offrono voli diretti o con scalo dall'Italia. Diverse compagnie aeree low cost e tradizionali internazionali servono anche il Tokyo Haneda Airport (HND), molto più vicino al centro città e quindi spesso preferito. Dall'Italia, i voli diretti sono meno comuni per Haneda, ma ci sono molte opzioni con scalo. Da Narita, si può raggiungere il centro con il Narita Express (treno veloce), il Keisei Skyliner (treno espresso) o autobus limousina. Da Haneda, si possono usare il Tokyo Monorail o il Keikyu Line per raggiungere vari punti della città.\n\nTrasporti: Il sistema di trasporti pubblici di Tokyo è uno dei più efficienti e complessi al mondo, basato su una fitta rete di metropolitana e treni urbani. Le compagnie principali sono Japan Railways (JR) e Tokyo Metro. Acquistare una carta ricaricabile (Suica o Pasmo) è altamente raccomandato per viaggiare facilmente su tutte le linee. I taxi sono disponibili ma costosi. Camminare è spesso il modo migliore per esplorare i singoli quartieri.\n\nSicurezza: Tokyo è una delle città più sicure al mondo. Il tasso di criminalità è estremamente basso. È possibile passeggiare tranquillamente a qualsiasi ora del giorno e della notte. Le piccole truffe ai turisti sono rare, ma è sempre consigliabile prestare attenzione ai propri effetti personali in luoghi affollati.\n\nClima: I migliori periodi per visitare Tokyo sono la primavera (marzo-maggio) e l'autunno (settembre-ottobre). In primavera il clima è mite e si può assistere alla fioritura dei ciliegi. L'autunno offre temperature piacevoli e foliage spettacolare. L'estate (giugno-agosto) è calda e umida, con possibilità di tifoni in tarda estate. L'inverno (dicembre-febbraio) è freddo e secco, con nevicate occasionali ma cieli spesso sereni.\n\nVisti e requisiti: I cittadini italiani non necessitano di visto per soggiorni turistici inferiori a 90 giorni. È sufficiente un passaporto valido per tutta la durata del soggiorno e un biglietto aereo di ritorno o di proseguimento. Assicuratevi di controllare eventuali aggiornamenti sulle politiche di ingresso prima della partenza.\n\nFuso orario: Tokyo si trova nel fuso orario di Japan Standard Time (JST), che è UTC+9. Non applica l'ora legale. Questo significa che rispetto all'Italia, Tokyo è generalmente 8 ore avanti quando in Italia vige l'ora solare e 7 ore avanti quando vige l'ora legale.\n\nConsigli utili: La valuta locale è il JPY (Yen giapponese). È consigliabile avere sempre un po' di contanti, poiché non tutti i piccoli esercizi accettano carte di credito. Le prese elettriche in Giappone sono di Tipo A e B, a due o tre poli piatti, con una tensione di 100V e una frequenza di 50/60 Hz (a seconda della regione). È necessario un adattatore e, se i vostri apparecchi non supportano i 100V, un convertitore di tensione.",
         "widget": null
       }
     ]
